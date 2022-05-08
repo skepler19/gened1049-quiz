@@ -1,0 +1,215 @@
+head, body
+{
+    font-family: times;
+}
+nav .navbar-brand
+{
+     /*size and font for brand*/
+    font-family: fantasy;
+    font-size: xx-large;
+}
+
+/*colors for brand*/
+nav .navbar-brand .color
+{
+    color: #d61e18;
+}
+
+main .form-control
+{
+     /*center form controls*/
+    display: inline-block;
+
+     /*override Bootstrap's 100% width for form controls*/
+    width: auto;
+}
+
+main
+{
+     /*scroll horizontally as needed*/
+    overflow-x: auto;
+
+     /*center contents*/
+    text-align: center;
+
+     /*create space between parts of page*/
+    padding: 15px 15px 15px 15px;
+
+    width: 100%;
+}
+
+main img
+{
+     /*constrain images on small screens*/
+    max-width: 100%;
+    padding-bottom: 15px;
+}
+
+body
+{
+    background-color: white;
+}
+
+.link
+{
+    color: black;
+}
+
+
+.travel
+{
+    float: left;
+}
+
+.climate-act-title, .climate-donate-title, .climate-news-title
+{
+    font-weight: bold;
+}
+
+.pos-f-t
+{
+    float: left;
+}
+
+a, a:hover, a:visited
+{
+    color: black;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.dropdown-item:hover, .dropdown-item:visited
+{
+    color: black;
+}
+
+ /*Container holding the image and the text*/
+/*.container {*/
+    /*position: relative;*/
+    /*text-align: center;*/
+/*}*/
+
+ /*Bottom left text*/
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+ /*Bottom right text*/
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+/*Bottom centered text*/
+.bottom-centered {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translate(-50%, 10%);
+}
+
+ /*Top left text*/
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+ /*Top right text*/
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.top-centered {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translate(-50%, 10%);
+}
+
+ /*Centered text*/
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header {
+    padding: 60px;
+    background-image: url("background1.jpeg");
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.social-share_container
+{
+    border-bottom: 1px #cdcdcd;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgb(205,205,205);
+
+    display: flex;
+    flex-direction: row;
+    max-width: 1290px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+
+    align-items: center;
+}
+
+.social-share_title
+{
+    color: #3c3c3c;
+    font-family: 'Whitney A', 'Whitney B', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-right: 20px;
+    text-align: left;
+
+}
+
+.social-share_icon img, .social-share_icon svg
+{
+    display: block;
+    height: 18px;
+}
+
+.social-share_icon
+{
+    border-right: 1px solid #cdcdcd;
+        border-right-width: 1px;
+        border-right-style: solid;
+        border-right-color: rgb(205,205,205);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: 2px solid gray;
+}
+
+input[type=password] {
+    border: none;
+    border-bottom: 2px solid gray;
+}
+
+input[type=number] {
+    border: none;
+    border-bottom: 2px solid gray;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 2px solid gray;
+}

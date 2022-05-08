@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Which Director Would You Like The Most?
+{% endblock %}
+
+{% block main %}
+
+    <div class="header">
+        <h1>Which Director Would You Like The Most?</h1>
+        <h3>Take this quiz to get matched with your next favorite director!</h3>
+    </div><br>
+
+    <br>
+    <form action="/quiz" method="post">
+
+        <div class="form-group"><br>
+            <select class="form-control" name="superpower" id="superpower">
+                <option disabled selected value>If you could have a superpower, what would it be?</option>
+                <option>Invisibility</option>
+                <option>The ability to fly</option>
+                <option>Create money out of thin air</option>
+                <option>Stay young forever</option>
+            </select>
+        </div>
+        <div class="form-group"><br>
+            <select class="form-control" name="home" id="home">
+                <option disabled selected value>What’s the first thing you do when you get home?</option>
+                <option>Hang up your coat and put your shoes on your neatly-organized rack</option>
+                <option>Immediately nap</option>
+                <option>Go straight for the fridge</option>
+                <option>Grab your charger and leave - you’re too busy to rest at home!</option>
+            </select>
+        </div>
+        <div class="form-group"><br>
+            <select class="form-control" name="color" id="color">
+                <option disabled selected value>What’s your favorite color?</option>
+                <option>Purple</option>
+                <option>Green</option>
+                <option>Red</option>
+                <option>None of these</option>
+            </select>
+        </div>
+        <div class="form-group"><br>
+            <select class="form-control" name="lists" id="lists">
+                <option disabled selected value>Do you make daily to-do lists?</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>Only if I’m busy</option>
+                <option>I never finish them</option>
+            </select>
+        </div>
+        <div class="form-group"><br>
+            <select class="form-control" name="personality" id="personality">
+                <option disabled selected value>How would you describe your personality?</option>
+                <option>Optimistic</option>
+                <option>Pessimistic</option>
+                <option>Realistic</option>
+                <option>I don't know</option>
+            </select>
+        </div>
+        <div class="form-group"><br>
+            <select class="form-control" name="phone" id="phone">
+                <option disabled selected value>How do you spend most of your time on your phone?</option>
+                <option>Scrolling through TikTok</option>
+                <option>Color coding your calendar</option>
+                <option>Coming up with a caption for the perfect insta post</option>
+                <option>Scrolling through baby animal insta reels because you refuse to download TikTok</option>
+            </select>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

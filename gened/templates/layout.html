@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- https://favicon.io/emoji-favicons/money-mouth-face/ -->
+        <link href="/static/film.jpeg" rel="icon">
+
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+        <title>GENED1049 {% block title %}{% endblock %}</title>
+
+        <script>
+            google.charts.load('current', {
+                'packages': ['geochart'],
+                // Note: you will need to get a mapsApiKey for your project.
+                // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+                'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+            });
+        </script>
+
+        {% block head %}{% endblock %}
+
+    </head>
+
+    <body>
+            <div class="pos-f-t">
+                <!--<div class="collapse" id="navbarToggleExternalContent">-->
+                <!--    <div class="bg-white p-4">-->
+                        <!--<a class="btn btn-success" href="https://www.catf.us/donate/" role="button" style="color: white">DONATE</a>-->
+                <!--        {% if session.user_id %}-->
+                <!--        <ul class="navbar-nav">-->
+                <!--            <li class="nav-item"><a class="nav-link" href="/homepage">Home</a></li>-->
+                <!--            <li class="nav-item"><a class="nav-link" href="/global">Global Data</a></li>-->
+                <!--            <li class="nav-item"><a class="nav-link" href="/impact">Impacts</a></li>-->
+                <!--            <li class="nav-item dropright">-->
+                <!--                <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                <!--                Calculator-->
+                <!--                </a>-->
+                <!--                <div class="dropdown-menu">-->
+                <!--                    <a class="dropdown-item" href="/sust">Overview</a>-->
+                <!--                    <a class="dropdown-item" href="/travel">Travel</a>-->
+                <!--                    <a class="dropdown-item" href="/household">Household</a>-->
+                <!--                    <a class="dropdown-item" href="/food">Food</a>-->
+                <!--                </div>-->
+                <!--            <li class="nav-item"><a class="nav-link" href="/history">History</a></li>-->
+                <!--            <li class="nav-item"><a class="nav-link" href="/share">Share</a></li>-->
+                <!--        </ul>-->
+                <!--        <ul class="navbar-nav">-->
+                <!--            <li class="nav-item"><a class="nav-link" href="/profile">Profile</a></li>-->
+                <!--            <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>-->
+                <!--        </ul>-->
+                <!--            {% else %}-->
+                <!--        <ul class="navbar-nav">-->
+                <!--            <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>-->
+                <!--            <li class="nav-item"><a class="nav-link" href="/login">Log In</a></li>-->
+                <!--        </ul>-->
+                <!--            {% endif %}-->
+                <!--    </div>-->
+                <!--</div>-->
+                <!--<nav class="navbar navbar-light bg-white mr-auto mt-2">-->
+                <!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">-->
+                <!--    <span class="navbar-toggler-icon"></span>-->
+                <!--    </button>-->
+                <!--</nav>-->
+            </div>
+            <nav class="navbar navbar-expand-md navbar-white bg-white ml-auto mt-2">
+                <a class="navbar-brand ml-auto mt-2" href="/">
+                    <span class="color">GENED 1049: East Asian Cinema </span>
+                    <img src="/static/film.jpeg" width="25" height="25">
+                </a>
+                <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+
+        {% if get_flashed_messages() %}
+            <header>
+
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    <!-- Categories: success (green), info (blue), warning (yellow), danger (red) -->
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ category }} alert-dismissible text-center" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            {% if category == "success" %}
+                                <strong>Success: </strong> {{ message }}!
+                            {% endif %}
+                            {% if category == "info" %}
+                                {{ message }}
+                            {% endif %}
+                            {% if category == "warning" %}
+                                <strong>Warning: </strong> {{ message }}
+                            {% endif %}
+                            {% if category == "danger" %}
+                                <strong>Error: </strong> {{ message }}
+                            {% endif %}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+            </header>
+        {% endif %}
+
+        <main class="container-fluid">
+            {% block main %}{% endblock %}
+        </main>
+
+        <br><br>
+
+    </body>
+
+</html>
